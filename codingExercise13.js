@@ -1,8 +1,7 @@
-// Write a function called product of array which accepts anarray of numbers and
-// returns the product of them all.
+// Write a function called recursiveRange which accepts a number and returns the
+// sum of numbers from zero to that number
 
-function productOfArray(arr){
-  if(arr.length === 0) return 0;
-  if(arr.length === 1) return arr[0];
-  return arr[0] * productOfArray(arr.slice(1));
+function recursiveRange(num){
+  if(num === 1) return 1;
+  return num + recursiveRange(--num);
 }

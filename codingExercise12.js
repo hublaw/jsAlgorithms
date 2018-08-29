@@ -1,8 +1,8 @@
-// Write a function called power which accepts a base and an exponent. The function
-// should return the power of the base to the exponent. This function should mimic
-// Math.power. Do not worry about negative bases and exponents
+// Write a function called product of array which accepts anarray of numbers and
+// returns the product of them all.
 
-function power(base, exponent){
-  if(exponent === 0) return 1;
-  return base * power(base, --exponent);
+function productOfArray(arr){
+  if(arr.length === 0) return 0;
+  if(arr.length === 1) return arr[0];
+  return arr[0] * productOfArray(arr.slice(1));
 }
